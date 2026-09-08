@@ -4,6 +4,9 @@ from playwright.sync_api import Playwright, sync_playwright, expect
 from bs4 import BeautifulSoup
 import pyfiglet
 
+# Fichier dans lequel sauvegarder les adresses valides
+FICHIER_RESULTATS = "emails_valides.txt"
+
 def verifier_existence_email(email: str):
     email = email.strip()
     if "@" not in email:
